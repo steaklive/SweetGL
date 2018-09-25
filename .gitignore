@@ -1,0 +1,5 @@
+bin/*
+!bin/media
+bin/media/*
+!bin/media/shaders
+extern/*
