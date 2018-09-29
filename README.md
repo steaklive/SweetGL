@@ -7,8 +7,9 @@ Simple GLFW OpenGL/C++ framework for educational purposes: Assimp, ImGUI, Comput
 # Current features
 - 3D model loading (.obj, .fbx and etc.) with Assimp Library
 - User Interface with ImGui
-- 'GPU particles' with Compute/Geometry Shaders
-- 'Depth of Field' with Compute Shaders
+- Demos:
+  - 'GPU particles' with Compute/Geometry Shaders
+  - 'Depth of Field' with Compute Shaders
 
 # External Dependencies
 - GLFW (https://github.com/glfw/glfw)
