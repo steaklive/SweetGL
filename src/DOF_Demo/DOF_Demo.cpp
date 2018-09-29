@@ -7,7 +7,7 @@
 #define FBO_SIZE                4096
 #define FRUSTUM_DEPTH           1000
 
-static GLfloat backgroundColor[] = { 0.358f, 0.358f, 0.358f, 0.358f };
+static GLfloat backgroundColor[] = { 0.0f, 0.0f, 0.0f, 1.0f };
 
 
 void DOF_Demo::Setup()

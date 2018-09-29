@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SweetGL", "SweetGL\SweetGL.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DOF_Demo", "..\DOF_Demo\DOF_Demo.vcxproj", "{9908931A-2286-4C1E-ABF4-03691155ED91}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GPU_Particles_Demo", "..\GPU_Particles_Demo\GPU_Particles_Demo.vcxproj", "{CBE69BC7-F951-4A15-B6DF-192F37747D00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{9908931A-2286-4C1E-ABF4-03691155ED91}.Release|x64.Build.0 = Release|x64
 		{9908931A-2286-4C1E-ABF4-03691155ED91}.Release|x86.ActiveCfg = Release|Win32
 		{9908931A-2286-4C1E-ABF4-03691155ED91}.Release|x86.Build.0 = Release|Win32
+		{CBE69BC7-F951-4A15-B6DF-192F37747D00}.Debug|x64.ActiveCfg = Debug|x64
+		{CBE69BC7-F951-4A15-B6DF-192F37747D00}.Debug|x64.Build.0 = Debug|x64
+		{CBE69BC7-F951-4A15-B6DF-192F37747D00}.Debug|x86.ActiveCfg = Debug|Win32
+		{CBE69BC7-F951-4A15-B6DF-192F37747D00}.Debug|x86.Build.0 = Debug|Win32
+		{CBE69BC7-F951-4A15-B6DF-192F37747D00}.Release|x64.ActiveCfg = Release|x64
+		{CBE69BC7-F951-4A15-B6DF-192F37747D00}.Release|x64.Build.0 = Release|x64
+		{CBE69BC7-F951-4A15-B6DF-192F37747D00}.Release|x86.ActiveCfg = Release|Win32
+		{CBE69BC7-F951-4A15-B6DF-192F37747D00}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

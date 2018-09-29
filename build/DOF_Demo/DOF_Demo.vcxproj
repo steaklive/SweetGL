@@ -186,6 +186,13 @@
   <ItemGroup>
     <ClCompile Include="..\..\src\DOF_Demo\DOF_Demo.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\bin\media\shaders\dof\display.fs.glsl" />
+    <None Include="..\..\bin\media\shaders\dof\display.vs.glsl" />
+    <None Include="..\..\bin\media\shaders\dof\gensat.cs.glsl" />
+    <None Include="..\..\bin\media\shaders\dof\render.fs.glsl" />
+    <None Include="..\..\bin\media\shaders\dof\render.vs.glsl" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,0 +1,7 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(376,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+  GPU_Particles_Demo.cpp
+c:\users\gen\documents\graphics programming\opengl\sweetgl\src\gpu_particles_demo\gpu_particles_demo.cpp(107): warning C4244: '=': conversion from 'GLint' to 'GLfloat', possible loss of data
+c:\users\gen\documents\graphics programming\opengl\sweetgl\src\gpu_particles_demo\gpu_particles_demo.cpp(165): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\gen\documents\graphics programming\opengl\sweetgl\src\gpu_particles_demo\gpu_particles_demo.cpp(165): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(376,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+  GPU_Particles_Demo.vcxproj -> C:\Users\Gen\Documents\Graphics Programming\OpenGL\SweetGL\bin\GPU_Particles_Demo_d.exe

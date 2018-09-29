@@ -196,9 +196,6 @@
     <ClCompile Include="..\..\..\src\SweetGL\SweetGL.cpp" />
     <ClCompile Include="..\..\..\src\SweetGL\SweetGLShader.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="SweetGL.rc" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

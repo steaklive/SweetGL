@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{59144632-9f3c-4d70-b383-c9529e4d0db4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -29,5 +32,22 @@
     <ClCompile Include="..\..\src\DOF_Demo\DOF_Demo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\bin\media\shaders\dof\display.fs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\..\bin\media\shaders\dof\display.vs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\..\bin\media\shaders\dof\gensat.cs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\..\bin\media\shaders\dof\render.fs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\..\bin\media\shaders\dof\render.vs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>
