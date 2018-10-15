@@ -1,6 +1,7 @@
 # SweetGL
 Simple GLFW OpenGL/C++ framework for educational purposes: Assimp, ImGUI, Compute/Geometry Shaders and etc.
 
+<br>![alt text](https://preview.ibb.co/fYNQAf/Sweet-GL-Deferred-Shading.png")
 <br>![alt text](https://preview.ibb.co/bQsYeK/DOF.png")
 <br>![alt text](https://preview.ibb.co/nBUqRz/Untitled.png")
 
