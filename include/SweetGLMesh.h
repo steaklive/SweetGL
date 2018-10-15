@@ -78,15 +78,20 @@ public:
 
 													 // now set the sampler to the correct texture unit
 			glUniform1i(glGetUniformLocation(shaderProgram, (name + number).c_str()), i);
-			// and finally bind the texture
+			//// and finally bind the texture
 			glBindTexture(GL_TEXTURE_2D, textures[i].id);
+
 		}
 
 		// draw mesh
 		glBindVertexArray(VAO);
-		glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
-		glBindVertexArray(0);
 
+		glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
+
+		//glDrawArraysInstancedBaseInstance(GL_TRIANGLES, 0, indices.size(), 5, 0);
+
+		glBindVertexArray(0);
+		
 		// always good practice to set everything back to defaults once configured.
 		glActiveTexture(GL_TEXTURE0);
 	}

@@ -3,3 +3,5 @@ bin/*
 bin/media/*
 !bin/media/shaders
 extern/*
+*.opendb
+*.opensdf
