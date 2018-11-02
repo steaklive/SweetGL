@@ -167,7 +167,7 @@ namespace SweetGL
 			mGameInfo.windowHeight = 640;
 
 			mGameInfo.majorVersion = 4;
-			mGameInfo.minorVersion = 3;
+			mGameInfo.minorVersion = 4;
 
 			mGameInfo.samples = 0;
 			mGameInfo.flags.all = 0;

@@ -180,6 +180,7 @@
     <ClInclude Include="..\..\..\include\SweetGL.h" />
     <ClInclude Include="..\..\..\include\SweetGLMesh.h" />
     <ClInclude Include="..\..\..\include\SweetGLModel.h" />
+    <ClInclude Include="..\..\..\include\SweetGLQuad.h" />
     <ClInclude Include="..\..\..\include\SweetGLShader.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="targetver.h" />

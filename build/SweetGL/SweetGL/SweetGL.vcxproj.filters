@@ -66,6 +66,9 @@
     <ClInclude Include="..\..\..\extern\ImGUI\stb_truetype.h">
       <Filter>Source Files\Imgui</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\SweetGLQuad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\src\SweetGL\SweetGL.cpp">
