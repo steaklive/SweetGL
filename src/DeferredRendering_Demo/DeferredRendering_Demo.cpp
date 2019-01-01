@@ -192,7 +192,7 @@ void DeferredRendering_Demo::Draw(double currentTime)
 	UpdateLights();
 
 	glBindFramebuffer(GL_FRAMEBUFFER, mGbuffer);
-	glViewport(0, 0, mGameInfo.windowWidth, mGameInfo.windowHeight);
+	glViewport(0, 0, GameInfo.windowWidth, GameInfo.windowHeight);
 	glDrawBuffers(2, draw_buffers);
 	glClearBufferuiv(GL_COLOR, 0, uint_zeros);
 	glClearBufferuiv(GL_COLOR, 1, uint_zeros);
@@ -204,7 +204,7 @@ void DeferredRendering_Demo::Draw(double currentTime)
 
 	//proj matrix
 	matrices[0] = vmath::perspective(60.0f,
-		(float)mGameInfo.windowWidth / (float)mGameInfo.windowHeight,
+		(float)GameInfo.windowWidth / (float)GameInfo.windowHeight,
 		0.1f,
 		1000.0f);
 
@@ -227,7 +227,7 @@ void DeferredRendering_Demo::Draw(double currentTime)
 	object.model.Draw(mRenderProgram);
 
 	glBindFramebuffer(GL_FRAMEBUFFER, 0);
-	glViewport(0, 0, mGameInfo.windowWidth, mGameInfo.windowHeight);
+	glViewport(0, 0, GameInfo.windowWidth, GameInfo.windowHeight);
 	glDrawBuffer(GL_BACK);
 
 	glActiveTexture(GL_TEXTURE0);

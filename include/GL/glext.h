@@ -6160,7 +6160,7 @@ typedef ptrdiff_t GLsizeiptrARB;
 #endif
 
 #ifndef GL_ARB_shader_objects
-/* GL types for program/shader text and shader object handles */
+/* GL types for program/shader text and shader PlaneObject handles */
 typedef char GLcharARB;
 typedef unsigned int GLhandleARB;
 #endif

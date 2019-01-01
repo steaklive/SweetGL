@@ -79,8 +79,8 @@ namespace SweetGL
 
 			Initialize();
 
-			glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, mGameInfo.majorVersion);
-			glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, mGameInfo.minorVersion);
+			glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, GameInfo.majorVersion);
+			glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, GameInfo.minorVersion);
 
 			#ifndef _DEBUG
 						if (info.flags.debug)
@@ -89,16 +89,16 @@ namespace SweetGL
 				glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GL_TRUE);
 			}
 
-			if (mGameInfo.flags.robust)
+			if (GameInfo.flags.robust)
 			{
 				glfwWindowHint(GLFW_CONTEXT_ROBUSTNESS, GLFW_LOSE_CONTEXT_ON_RESET);
 			}
 			glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 			glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-			glfwWindowHint(GLFW_SAMPLES, mGameInfo.samples);
-			glfwWindowHint(GLFW_STEREO, mGameInfo.flags.stereo ? GL_TRUE : GL_FALSE);
+			glfwWindowHint(GLFW_SAMPLES, GameInfo.samples);
+			glfwWindowHint(GLFW_STEREO, GameInfo.flags.stereo ? GL_TRUE : GL_FALSE);
 			{
-				mWindow = glfwCreateWindow(mGameInfo.windowWidth, mGameInfo.windowHeight, mGameInfo.title.c_str(), mGameInfo.flags.fullscreen ? glfwGetPrimaryMonitor() : NULL, NULL);
+				mWindow = glfwCreateWindow(GameInfo.windowWidth, GameInfo.windowHeight, GameInfo.title.c_str(), GameInfo.flags.fullscreen ? glfwGetPrimaryMonitor() : NULL, NULL);
 				if (!mWindow)
 				{
 					fprintf(stderr, "Failed to open window\n");
@@ -115,7 +115,7 @@ namespace SweetGL
 			glfwSetCursorPosCallback		(mWindow, GLFWwindowMouseMove);
 			glfwSetScrollCallback			(mWindow, GLFWwindowMouseWheel);
 
-			if (!mGameInfo.flags.cursor)
+			if (!GameInfo.flags.cursor)
 			{
 				glfwSetInputMode(mWindow, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
 			}
@@ -132,7 +132,7 @@ namespace SweetGL
 						fprintf(stderr, "RENDERER: %s\n", (char *)glGetString(GL_RENDERER));
 			#endif
 
-			if (mGameInfo.flags.debug)
+			if (GameInfo.flags.debug)
 			{
 				if (gl3wIsSupported(4, 3))
 				{
@@ -162,19 +162,19 @@ namespace SweetGL
 		}
 		virtual void Initialize()
 		{
-			mGameInfo.title = "SweetGL - Sample Window";
-			mGameInfo.windowWidth = 960;
-			mGameInfo.windowHeight = 640;
+			GameInfo.title = "SweetGL - Sample Window";
+			GameInfo.windowWidth = 960;
+			GameInfo.windowHeight = 640;
 
-			mGameInfo.majorVersion = 4;
-			mGameInfo.minorVersion = 4;
+			GameInfo.majorVersion = 4;
+			GameInfo.minorVersion = 4;
 
-			mGameInfo.samples = 0;
-			mGameInfo.flags.all = 0;
-			mGameInfo.flags.cursor = 1;
+			GameInfo.samples = 0;
+			GameInfo.flags.all = 0;
+			GameInfo.flags.cursor = 1;
 
 			#ifdef _DEBUG
-				mGameInfo.flags.debug = 1;
+				GameInfo.flags.debug = 1;
 			#endif
 
 		}
@@ -225,8 +225,8 @@ namespace SweetGL
 		// Actions 
 		virtual void OnWindowResize(int w, int h)
 		{
-			mGameInfo.windowWidth = w;
-			mGameInfo.windowHeight = h;
+			GameInfo.windowWidth = w;
+			GameInfo.windowHeight = h;
 		}
 		virtual void OnKeyPressed(int key, int action)
 		{
@@ -260,7 +260,7 @@ namespace SweetGL
 	protected:
 
 		static SweetGL::Game *mGame;
-		INFO mGameInfo;
+		INFO GameInfo;
 		GLFWwindow* mWindow;
 
 		static void GLFWwindowResize(GLFWwindow* window, int w, int h)
@@ -290,8 +290,8 @@ namespace SweetGL
 
 		void SetVsync(bool enable)
 		{
-			mGameInfo.flags.vsync = enable ? 1 : 0;
-			glfwSwapInterval((int)mGameInfo.flags.vsync);
+			GameInfo.flags.vsync = enable ? 1 : 0;
+			glfwSwapInterval((int)GameInfo.flags.vsync);
 		}
 	};
 

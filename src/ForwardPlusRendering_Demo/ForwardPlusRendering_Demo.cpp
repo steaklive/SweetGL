@@ -19,7 +19,7 @@ void ForwardPlusRendering_Demo::Setup()
 
 	CameraData.projMatrix = vmath::perspective(
 		CameraData.fov,
-		(float)mGameInfo.windowWidth / (float)mGameInfo.windowHeight,
+		(float)GameInfo.windowWidth / (float)GameInfo.windowHeight,
 		CameraData.nearPlane,
 		CameraData.farPlane
 	);
@@ -29,11 +29,11 @@ void ForwardPlusRendering_Demo::Setup()
 		vmath::vec3(0.0f, -2.5f, 0.0f),
 		vmath::vec3(0.0f, 1.0f, 0.0f));
 
-	CameraData.screenSize = vmath::vec2(mGameInfo.windowWidth, mGameInfo.windowHeight);
+	CameraData.screenSize = vmath::vec2(GameInfo.windowWidth, GameInfo.windowHeight);
 
 
-	mWorkGroupsX = (mGameInfo.windowWidth + (mGameInfo.windowWidth%TILE_SIZE))/TILE_SIZE;
-	mWorkGroupsY = (mGameInfo.windowHeight + (mGameInfo.windowHeight%TILE_SIZE)) / TILE_SIZE;
+	mWorkGroupsX = (GameInfo.windowWidth + (GameInfo.windowWidth%TILE_SIZE))/TILE_SIZE;
+	mWorkGroupsY = (GameInfo.windowHeight + (GameInfo.windowHeight%TILE_SIZE)) / TILE_SIZE;
 
 	GLuint tilesCount = mWorkGroupsX * mWorkGroupsY;
 	   
@@ -157,8 +157,8 @@ void ForwardPlusRendering_Demo::LoadShaders()
 
 void ForwardPlusRendering_Demo::UpdateSSBO()
 {
-	GLuint workgroup_x = (mGameInfo.windowWidth + (mGameInfo.windowWidth % TILE_SIZE)) / TILE_SIZE;
-	GLuint workgroup_y = (mGameInfo.windowHeight + (mGameInfo.windowHeight % TILE_SIZE)) / TILE_SIZE;
+	GLuint workgroup_x = (GameInfo.windowWidth + (GameInfo.windowWidth % TILE_SIZE)) / TILE_SIZE;
+	GLuint workgroup_y = (GameInfo.windowHeight + (GameInfo.windowHeight % TILE_SIZE)) / TILE_SIZE;
 
 	glBindBuffer(GL_SHADER_STORAGE_BUFFER, mIndexBuffer);
 	glBufferData(GL_SHADER_STORAGE_BUFFER, sizeof(int) * workgroup_x * workgroup_y * MAX_LIGHTS_PER_TILE,	NULL, GL_DYNAMIC_DRAW);
@@ -249,14 +249,14 @@ void ForwardPlusRendering_Demo::Draw(double currentTime)
 	UpdateSSBO();
 
 	glEnable(GL_DEPTH_TEST);
-	glViewport(0, 0, mGameInfo.windowWidth, mGameInfo.windowHeight);
+	glViewport(0, 0, GameInfo.windowWidth, GameInfo.windowHeight);
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 
 	CameraData.projMatrix = vmath::perspective(
 		CameraData.fov,
-		(float)mGameInfo.windowWidth / (float)mGameInfo.windowHeight,
+		(float)GameInfo.windowWidth / (float)GameInfo.windowHeight,
 		CameraData.nearPlane,
 		CameraData.farPlane
 	);
@@ -266,7 +266,7 @@ void ForwardPlusRendering_Demo::Draw(double currentTime)
 		vmath::vec3(0.0f, -2.5f, 0.0f),
 		vmath::vec3(0.0f, 1.0f, 0.0f));
 
-	CameraData.screenSize = vmath::vec2(mGameInfo.windowWidth, mGameInfo.windowHeight);
+	CameraData.screenSize = vmath::vec2(GameInfo.windowWidth, GameInfo.windowHeight);
 
 	object.modelMatrix = vmath::translate(0.0f, 0.0f, 0.0f) *vmath::rotate(-90.0f, vmath::vec3(0.0, 1.0, 0.0));
 
@@ -279,7 +279,7 @@ void ForwardPlusRendering_Demo::Draw(double currentTime)
 		glDepthFunc(GL_LESS);
 
 		////update depth uniforms
-		//glViewport(0, 0, mGameInfo.windowWidth, mGameInfo.windowHeight);
+		//glViewport(0, 0, GameInfo.windowWidth, GameInfo.windowHeight);
 
 		glEnable(GL_POLYGON_OFFSET_FILL);
 		//glPolygonOffset(4.0f, 4.0f);
@@ -306,7 +306,7 @@ void ForwardPlusRendering_Demo::Draw(double currentTime)
 		#pragma region  DEBUG_DEPTH
 
 		//Depth debug
-		glViewport(0, 0, mGameInfo.windowWidth, mGameInfo.windowHeight);
+		glViewport(0, 0, GameInfo.windowWidth, GameInfo.windowHeight);
 
 		glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, 0);
 		glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 1, 0);
@@ -328,8 +328,8 @@ void ForwardPlusRendering_Demo::Draw(double currentTime)
 			glDepthFunc(GL_EQUAL);
 			glClear(GL_COLOR_BUFFER_BIT);
 
-			mWorkGroupsX = (mGameInfo.windowWidth + (mGameInfo.windowWidth%TILE_SIZE)) / TILE_SIZE;
-			mWorkGroupsY = (mGameInfo.windowHeight + (mGameInfo.windowHeight%TILE_SIZE)) / TILE_SIZE;
+			mWorkGroupsX = (GameInfo.windowWidth + (GameInfo.windowWidth%TILE_SIZE)) / TILE_SIZE;
+			mWorkGroupsY = (GameInfo.windowHeight + (GameInfo.windowHeight%TILE_SIZE)) / TILE_SIZE;
 
 			glUseProgram(mLightCullingProgram);
 
@@ -417,7 +417,7 @@ void ForwardPlusRendering_Demo::GenerateFrameBuffers()
 
 	glGenTextures(1, &mDepthMap);
 	glBindTexture(GL_TEXTURE_2D, mDepthMap);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT, mGameInfo.windowWidth, mGameInfo.windowHeight, 0, GL_DEPTH_COMPONENT, GL_FLOAT, NULL);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT, GameInfo.windowWidth, GameInfo.windowHeight, 0, GL_DEPTH_COMPONENT, GL_FLOAT, NULL);
 
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
@@ -439,14 +439,14 @@ void ForwardPlusRendering_Demo::GenerateFrameBuffers()
 	
 	glGenTextures(1, &mColorBuffer);
 	glBindTexture(GL_TEXTURE_2D, mColorBuffer);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB16F, mGameInfo.windowWidth, mGameInfo.windowHeight, 0, GL_RGB, GL_FLOAT, NULL);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB16F, GameInfo.windowWidth, GameInfo.windowHeight, 0, GL_RGB, GL_FLOAT, NULL);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	
 	// render depth
 	glGenRenderbuffers(1, &mRenderDepthBuffer);
 	glBindRenderbuffer(GL_RENDERBUFFER, mRenderDepthBuffer);
-	glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT, mGameInfo.windowWidth, mGameInfo.windowHeight);
+	glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT, GameInfo.windowWidth, GameInfo.windowHeight);
 	
 	glBindFramebuffer(GL_FRAMEBUFFER, mRenderFBO);
 	glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, mColorBuffer, 0);

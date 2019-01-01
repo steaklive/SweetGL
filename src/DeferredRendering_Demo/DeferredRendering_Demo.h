@@ -26,7 +26,7 @@ protected:
 	{
 
 		SweetGL::Game::Initialize();
-		mGameInfo.title = "SweetGL - Deferred Shading Demo";
+		GameInfo.title = "SweetGL - Deferred Shading Demo";
 	}
 
 	virtual void Setup() override;

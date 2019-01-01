@@ -83,7 +83,7 @@ private:
 		// process each mesh located at the current node
 		for (unsigned int i = 0; i < node->mNumMeshes; i++)
 		{
-			// the node object only contains indices to index the actual objects in the scene. 
+			// the node PlaneObject only contains indices to index the actual objects in the scene. 
 			// the scene contains all the data, node is just to keep stuff organized (like relations between nodes).
 			aiMesh* mesh = scene->mMeshes[node->mMeshes[i]];
 			meshes.push_back(processMesh(mesh, scene));
@@ -173,7 +173,7 @@ private:
 		//std::vector<Texture> heightMaps = loadMaterialTextures(material, aiTextureType_AMBIENT, "texture_height");
 		//textures.insert(textures.end(), heightMaps.begin(), heightMaps.end());
 
-		// return a mesh object created from the extracted mesh data
+		// return a mesh PlaneObject created from the extracted mesh data
 		return Mesh(vertices, indices, textures);
 	}
 

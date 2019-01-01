@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeferredRendering_Demo", ".
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ForwardPlusRendering_Demo", "..\ForwardPlusRendering_Demo\ForwardPlusRendering_Demo.vcxproj", "{5D459FC8-B5BA-4EF7-8BEC-936152E63766}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ScreenSpaceReflections_Demo", "..\ScreenSpaceReflections_Demo\ScreenSpaceReflections_Demo.vcxproj", "{9E47CA81-4968-4ED3-B82D-AA8D9153AF73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{5D459FC8-B5BA-4EF7-8BEC-936152E63766}.Release|x64.Build.0 = Release|x64
 		{5D459FC8-B5BA-4EF7-8BEC-936152E63766}.Release|x86.ActiveCfg = Release|Win32
 		{5D459FC8-B5BA-4EF7-8BEC-936152E63766}.Release|x86.Build.0 = Release|Win32
+		{9E47CA81-4968-4ED3-B82D-AA8D9153AF73}.Debug|x64.ActiveCfg = Debug|x64
+		{9E47CA81-4968-4ED3-B82D-AA8D9153AF73}.Debug|x64.Build.0 = Debug|x64
+		{9E47CA81-4968-4ED3-B82D-AA8D9153AF73}.Debug|x86.ActiveCfg = Debug|Win32
+		{9E47CA81-4968-4ED3-B82D-AA8D9153AF73}.Debug|x86.Build.0 = Debug|Win32
+		{9E47CA81-4968-4ED3-B82D-AA8D9153AF73}.Release|x64.ActiveCfg = Release|x64
+		{9E47CA81-4968-4ED3-B82D-AA8D9153AF73}.Release|x64.Build.0 = Release|x64
+		{9E47CA81-4968-4ED3-B82D-AA8D9153AF73}.Release|x86.ActiveCfg = Release|Win32
+		{9E47CA81-4968-4ED3-B82D-AA8D9153AF73}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

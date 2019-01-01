@@ -53,7 +53,7 @@ void GPU_Particles_Demo::Setup() {
 
 	CameraData.projMatrix = vmath::perspective(
 		CameraData.fov,
-		(float)mGameInfo.windowWidth / (float)mGameInfo.windowHeight,
+		(float)GameInfo.windowWidth / (float)GameInfo.windowHeight,
 		CameraData.nearPlane,
 		CameraData.farPlane
 	);
@@ -132,7 +132,7 @@ void GPU_Particles_Demo::Draw(double currentTime) {
 
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glClear(GL_COLOR_BUFFER_BIT);
-	glViewport(0, 0, mGameInfo.windowWidth, mGameInfo.windowHeight);
+	glViewport(0, 0, GameInfo.windowWidth, GameInfo.windowHeight);
 
 	glBindVertexArray(mVertexArrayID);
 
@@ -185,8 +185,8 @@ void GPU_Particles_Demo::UpdateAttractor()
 {
 	vmath::vec3 view, h, v, pos, dir, attractor(0);
 
-	auto width = static_cast<float>(mGameInfo.windowWidth);
-	auto height = static_cast<float>(mGameInfo.windowHeight);
+	auto width = static_cast<float>(GameInfo.windowWidth);
+	auto height = static_cast<float>(GameInfo.windowHeight);
 
 	float aspectRatio = width / height;
 

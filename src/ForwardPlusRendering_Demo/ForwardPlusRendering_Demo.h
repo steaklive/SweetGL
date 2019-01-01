@@ -33,7 +33,7 @@ protected:
 	{
 
 		SweetGL::Game::Initialize();
-		mGameInfo.title = "SweetGL - Forward+ Shading Demo";
+		GameInfo.title = "SweetGL - Forward+ Shading Demo";
 
 	}
 

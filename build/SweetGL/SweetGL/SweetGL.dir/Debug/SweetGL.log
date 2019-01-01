@@ -1,2 +1,13 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(376,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_dx11.cpp
+  imgui_impl_glfw.cpp
+  imgui_impl_opengl3.cpp
+  imgui_impl_win32.cpp
+  SweetGL.cpp
+  SweetGLShader.cpp
+  Generating Code...
+  gl3w.c
   SweetGL.vcxproj -> C:\Users\Gen\Documents\Graphics Programming\OpenGL\SweetGL\lib\SweetGL_d.lib

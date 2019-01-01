@@ -75,7 +75,7 @@ void DOF_Demo::Draw(double currentTime)
 	vmath::vec3 view_position = vmath::vec3(0.0f, 0.0f, 50.0f);
 
 	mCameraProjMatrix = vmath::perspective(30.0f,
-		(float)mGameInfo.windowWidth / (float)mGameInfo.windowHeight,
+		(float)GameInfo.windowWidth / (float)GameInfo.windowHeight,
 		2.0f,
 		300.0f);
 
@@ -112,14 +112,14 @@ void DOF_Demo::Draw(double currentTime)
 	glBindImageTexture(0, mColorTexture, 0, GL_FALSE, 0, GL_READ_ONLY, GL_RGBA32F);
 	glBindImageTexture(1, mTempTexture, 0, GL_FALSE, 0, GL_WRITE_ONLY, GL_RGBA32F);
 
-	glDispatchCompute(mGameInfo.windowHeight, 1, 1);
+	glDispatchCompute(GameInfo.windowHeight, 1, 1);
 
 	glMemoryBarrier(GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
 
 	glBindImageTexture(0, mTempTexture, 0, GL_FALSE, 0, GL_READ_ONLY, GL_RGBA32F);
 	glBindImageTexture(1, mColorTexture, 0, GL_FALSE, 0, GL_WRITE_ONLY, GL_RGBA32F);
 
-	glDispatchCompute(mGameInfo.windowWidth, 1, 1);
+	glDispatchCompute(GameInfo.windowWidth, 1, 1);
 
 	glMemoryBarrier(GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
 
@@ -158,7 +158,7 @@ void DOF_Demo::RenderScene(double currentTime)
 	glBindFramebuffer(GL_FRAMEBUFFER, mDepthFBO);
 
 	glDrawBuffers(1, attachments);
-	glViewport(0, 0, mGameInfo.windowWidth, mGameInfo.windowHeight);
+	glViewport(0, 0, GameInfo.windowWidth, GameInfo.windowHeight);
 	glClearBufferfv(GL_COLOR, 0, backgroundColor);
 	glClearBufferfv(GL_DEPTH, 0, ones);
 	glUseProgram(mViewProgram);

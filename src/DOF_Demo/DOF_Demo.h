@@ -28,7 +28,7 @@ protected:
 	{
 
 		SweetGL::Game::Initialize();
-		mGameInfo.title = "SweetGL - DOF Demo";
+		GameInfo.title = "SweetGL - DOF Demo";
 	}
 
 	virtual void Setup() override;

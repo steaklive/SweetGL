@@ -23,7 +23,7 @@ protected:
 	void Initialize()
 	{
 		SweetGL::Game::Initialize();
-		mGameInfo.title = "SweetGL - GPU Particles Demo";
+		GameInfo.title = "SweetGL - GPU Particles Demo";
 	}
 
 	virtual void Setup() override;

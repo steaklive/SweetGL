@@ -1,0 +1,8 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(376,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+  ScreenSpaceReflections_Demo.cpp
+c:\users\gen\documents\graphics programming\opengl\sweetgl\include\vmath.h(1022): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\gen\documents\graphics programming\opengl\sweetgl\src\screenspacereflections_demo\screenspacereflections_demo.cpp(338): warning C4101: 'j': unreferenced local variable
+c:\users\gen\documents\graphics programming\opengl\sweetgl\src\screenspacereflections_demo\screenspacereflections_demo.cpp(338): warning C4101: 'i': unreferenced local variable
+c:\users\gen\documents\graphics programming\opengl\sweetgl\src\screenspacereflections_demo\screenspacereflections_demo.cpp(545): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\gen\documents\graphics programming\opengl\sweetgl\src\screenspacereflections_demo\screenspacereflections_demo.cpp(546): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  ScreenSpaceReflections_Demo.vcxproj -> C:\Users\Gen\Documents\Graphics Programming\OpenGL\SweetGL\bin\ScreenSpaceReflections_Demo_d.exe
